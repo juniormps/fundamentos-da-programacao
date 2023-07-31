@@ -1,5 +1,6 @@
 programa {
 	funcao inicio() {
+	    escreva("{ EXERCÍCIO 003 - Antes e Depois }")
         inteiro n
 	    escreva("Me diga um número: ")
 	    leia(n)
