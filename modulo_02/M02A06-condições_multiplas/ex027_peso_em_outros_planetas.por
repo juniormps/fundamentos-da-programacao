@@ -2,15 +2,15 @@ programa {
     inclua biblioteca Matematica --> m
 	funcao inicio() {
 	    
-	    inteiro num
-	    real pesot
-	    
 	    escreva("{ EXERCÍCIO 027 - Seu peso nos planetas }\n\n")
+	    
+	    inteiro num  //opções do menu
+	    real pesot  //peso na Terra
 	        
-	   escreva("Qual é o seu peso aqui na Terra (em Kg): ")
-	   leia(pesot)
+	    escreva("Qual é o seu peso aqui na Terra (em Kg): ")
+	    leia(pesot)
 	   
-	   escreva(
+	    escreva(
 	        "\n\t\t\tESCOLHA UM PLANETA\n",
             "\t\t==========================\n",
             "\t\t(Opção 1) \t\tMercúrio\n",
@@ -47,7 +47,7 @@ programa {
                 escreva("No planeta Urano, seu peso seria " +m.arredondar((pesot*1.17), 2) + "Kg")
                 pare    
             caso contrario:
-                escreva("ERRO! Escolha uma opção entre 1 e 4")
+                escreva("ERRO! Escolha uma opção entre 1 e 6")
                 pare
         }
         
