@@ -18,6 +18,7 @@ programa {
 		
 		escreva("Quantas pessoas vamos cadastrar? ")
 		leia(totp)  //total de pessoas
+		escreva("\n")
 		
 		c = 1
 		maior = 0
@@ -36,10 +37,13 @@ programa {
 		    
 		    escreva("IDADE: ")
 		    leia(idade)
+		    escreva("\n")
 		    
 		    se (c == 1) {
 		        maior = idade
 		        menor = idade
+		        pmaior = nome
+		        pmenor = nome
 		    } senao {
 		        
 		        se (idade > maior) {
@@ -57,8 +61,8 @@ programa {
 		}
 		
 		escreva("------------------------------------\n")
-		escreva("A pessoa mais velha é o ", pmaior, " que tem ", maior, " anos\n")
-		escreva("A pessoa mais jovem é o ", pmenor, " que tem ", menor, " anos\n")
+		escreva("A pessoa mais velha é o(a) ", pmaior, ", que tem ", maior, " anos\n")
+		escreva("A pessoa mais jovem é o(a) ", pmenor, ", que tem ", menor, " anos\n")
 	}
 }
 
