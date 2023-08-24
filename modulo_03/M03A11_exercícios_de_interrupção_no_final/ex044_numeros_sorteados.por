@@ -9,7 +9,7 @@ programa {
 		tot = 0  //total de números sorteados
 		soma = 0  //soma dos valores sorteados
 		maior = 0  //maior valor sorteado
-		menor = 10  //menor valor sorteado
+		menor = 0  //menor valor sorteado
 		tot_cinco = 0  //total de vezes que o número 5 foi sorteado
 		
 		escreva(
@@ -26,12 +26,21 @@ programa {
     	    
     	    soma += n
     	    
-    	    se (n > maior) {
+    	    se (tot == 1) {
+    	        
     	        maior = n
-    	    }
-    	    
-    	    se (n < menor) {
     	        menor = n
+    	        
+    	    } senao {
+    	        
+        	    se (n > maior) {
+        	        maior = n
+        	    }
+        	    
+        	    se (n < menor) {
+        	        menor = n
+        	    }
+        	    
     	    }
     	    
     	    se (n == 5) {
