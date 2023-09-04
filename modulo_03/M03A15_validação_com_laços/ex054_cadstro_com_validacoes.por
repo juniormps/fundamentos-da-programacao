@@ -42,16 +42,16 @@ programa {
           escreva("<<ERRO>> A idade deve ser um número inteiro.\n")
         }
       }
-      /*
+      
       se (idade > maior_id) {
         maior_id = idade
         mais_velho = nome
       }
 
-      se (idade < menor_idade) {
+      se (idade < menor_id) {
         menor_id = idade
         mais_novo = nome
-      }*/
+      }
 
       enquanto (verdadeiro) {
         escreva("Quer continuar? [S/N] ")
@@ -72,7 +72,7 @@ programa {
 
     escreva(
       "\n===============================\n",
-      "Você cadastrou ", c, " pessoas.",
+      "Você cadastrou ", c, " pessoas.\n",
       mais_novo, " é a pessoa mais nova, com ", menor_id, " anos.\n",
       mais_velho, " é a pessoa mais velha, com ", maior_id, " anos.\n",
       "===============================\n"
