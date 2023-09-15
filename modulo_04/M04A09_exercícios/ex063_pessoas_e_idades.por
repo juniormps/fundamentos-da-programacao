@@ -1,12 +1,13 @@
 programa {
+  inclua biblioteca Tipos --> tip
   inclua biblioteca Matematica --> mat
   inclua biblioteca Util --> u
   funcao inicio() {
     escreva("{ EXERCÍCIO 063 - Pessoas e Idades }\n\n")
 
     //VARIÁVEIS
-    cadeia nome[3]    
-    inteiro idade[3]
+    cadeia nome[6]    
+    inteiro idade[6]
     inteiro cadastro
     inteiro maior_idade
     inteiro soma_idades = 0
@@ -29,7 +30,7 @@ programa {
     escreva("\n==== ANALISANDO AS PESSOAS CADASTRADAS ====\n")
 
     //CALCULANDO E EXIBINDO A MÉDIA DAS IDADES
-    media_idades = soma_idades / u.numero_elementos(nome)
+    media_idades = tip.inteiro_para_real(soma_idades) / u.numero_elementos(nome)
     escreva("A média de idade do grupo cadastrado é de ", mat.arredondar(media_idades, 2), " anos.\n")
     
     //PESSOAS ACIMA DA MÉDIA DE IDADE

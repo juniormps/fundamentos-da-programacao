@@ -1,4 +1,5 @@
 programa {
+  inclua biblioteca Matematica --> mat
   inclua biblioteca Util --> u
   funcao inicio() {
     escreva("{ EXERCÍCIO 059 - Acima da Média }\n")
@@ -27,14 +28,16 @@ programa {
     //RESULTADOS
     escreva(
       "------------------------------------\n",
-      "A média da turma foi ", media, "\n",
+      "A média da turma foi ", mat.arredondar(media, 2), "\n",
       "------------------------------------\n",
       "Os alunos que ficaram acima da média foram:\n"
     )
 
+    //ESTE LOOPING FORNECE OS ALUNOS QUE FICARAM ACIMA DA MÉDIA DA TURMA
     para (id_aluno = 0; id_aluno < u.numero_elementos(nota); id_aluno++) {
       se (nota[id_aluno] > media) {
         escreva("Aluno ", id_aluno, "; ")
+        u.aguarde(500)
       }
     }
 

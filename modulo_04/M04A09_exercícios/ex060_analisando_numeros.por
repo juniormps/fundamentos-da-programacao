@@ -4,7 +4,12 @@ programa {
     escreva("{ EXERCÍCIO 060 - Analisando Números }\n")
 
     //VARIÁVEIS
-    inteiro num[10], posicao, soma_pares = 0, maior_valor, quant_impar = 0, quant_maior = 0
+    inteiro num[10]
+    inteiro posicao
+    inteiro soma_pares = 0
+    inteiro maior_valor
+    inteiro quant_impar = 0
+    inteiro quant_maior = 0
 
     escreva("Sorteando ", u.numero_elementos(num), " valores...\n")
 
