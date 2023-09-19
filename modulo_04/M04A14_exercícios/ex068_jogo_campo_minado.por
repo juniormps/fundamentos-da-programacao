@@ -106,28 +106,34 @@ programa {
           
         } senao {
           escreva(
-            "--> TIRO ERRADO! Você acertou uma bomba!",
+            "--> TIRO ERRADO! Você acertou uma bomba!\n",
             "-----------------------------\n",
             "       GAME OVER\n",
             "-----------------------------\n"
           )
 
-          campo_falso[coordenada_linha][coordenada_coluna] = 'b'
-
-          para (linha_c_falso = 0; linha_c_falso < u.numero_linhas(campo_falso); linha_c_falso++) {
+          para (linha_c_falso = 0; linha_c_falso < u.numero_linhas(campo_falso); linha_c_falso++) {     //este laço atribui novos valores à matriz "campo_falso"
             para (coluna_c_falso = 0; coluna_c_falso < u.numero_colunas(campo_falso); coluna_c_falso++) {
-              se (campo_falso[linha_c_falso][coluna_c_falso] != 'V' e campo_falso[linha_c_falso][coluna_c_falso] != 'b') {
-                campo_falso[linha_c_falso][coluna_c_falso] = 'z'
-                escreva(campo_falso[linha_c_falso][coluna_c_falso], "  ")
+              se (campo_falso[linha_c_falso][coluna_c_falso] == '?'){
+                campo_falso[linha_c_falso][coluna_c_falso] = '-'    //com '-' nas posições onde era '?'
+              }
+              se (campo_minado[linha_c_falso][coluna_c_falso] == 0) {
+                campo_falso[linha_c_falso][coluna_c_falso] = 'O'    //e 'O' nas posições onde era '0' (mina)
+              }
+            }
+          }
+
+          campo_falso[coordenada_linha][coordenada_coluna] = '*'    //aqui é atribuido um novo valor para posição onde acertou uma mina
+
+          para (linha_c_falso = 0; linha_c_falso < u.numero_linhas(campo_falso); linha_c_falso++) {     //este laço exibe o campo falso com as posições das bombas e os locais onde os tiros foram acertados:
+            para (coluna_c_falso = 0; coluna_c_falso < u.numero_colunas(campo_falso); coluna_c_falso++) {   //com 'V' onde acertou o alvo; '*' onde acertou uma mina; '-' onde era alvo e não foi acertado e; 'O' onde era mina e não foi acertado.
+              escreva(campo_falso[linha_c_falso][coluna_c_falso], "  ")                                     
             }
             escreva("\n")
           }
-
+          pare
         }
       }
-      
-      
-      
 
 
 
