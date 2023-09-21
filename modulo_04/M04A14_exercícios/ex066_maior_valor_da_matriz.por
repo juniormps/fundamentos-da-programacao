@@ -14,6 +14,8 @@ programa {
       para (coluna_tab = 0; coluna_tab < u.numero_colunas(tabela); coluna_tab++) {
         escreva("Digite um valor para a posição [", linha_tab, "][", coluna_tab, "]: ")
         leia(tabela[linha_tab][coluna_tab])
+        //tabela[linha_tab][coluna_tab] = u.sorteia(1, 10)   --> Estas duas linhas (17 e 18) servem para agilizar os testes
+        //escreva(tabela[linha_tab][coluna_tab], "\n")
       }
     }
 
