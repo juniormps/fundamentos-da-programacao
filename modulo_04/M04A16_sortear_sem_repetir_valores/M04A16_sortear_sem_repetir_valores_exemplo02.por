@@ -4,9 +4,9 @@ programa {
     //Versão desenvolvida por mim.
 
     //VARIÁVEIS
-    inteiro vet[10]
-    inteiro posicao = 0
-    inteiro indice_verificador
+    inteiro vet[10]  //vetor
+    inteiro posicao = 0  //variável de controle do laço de preenchimento do vetor / indice de cada posição do vetor
+    inteiro indice_verificador  //variável de controle do percurso de verificação
     logico encontrado  //variável lógica para indicar de o valor sorteado é repetido
 
     //PREENCHIMENTO DO VETOR
